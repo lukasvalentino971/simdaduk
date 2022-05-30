@@ -13,7 +13,7 @@
 						<option selected="selected">- Pilih Penduduk -</option>
 						<?php
 				// ambil data dari database
-				$query = "select * from tb_pdd where status='Ada'";
+				$query = "select * from penduduk where status='Ada'";
 				$hasil = mysqli_query($koneksi, $query);
 				while ($row = mysqli_fetch_array($hasil)) {
 				?>
@@ -56,13 +56,13 @@
 
     if (isset ($_POST['Simpan'])){
     //mulai proses simpan data
-        $sql_simpan = "INSERT INTO tb_pindah (id_pdd, tgl_pindah, alasan) VALUES (
+        $sql_simpan = "INSERT INTO pindah (id_pdd, tgl_pindah, alasan) VALUES (
 			'".$_POST['id_pdd']."',
             '".$_POST['tgl_pindah']."',
             '".$_POST['alasan']."')";
 		$query_simpan = mysqli_query($koneksi, $sql_simpan);
 		
-		$sql_ubah = "UPDATE tb_pdd SET 
+		$sql_ubah = "UPDATE penduduk SET 
 			status='Pindah'
 			WHERE id_pend='".$_POST['id_pdd']."'";
 		$query_ubah = mysqli_query($koneksi, $sql_ubah);

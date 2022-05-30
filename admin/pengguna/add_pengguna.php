@@ -50,7 +50,7 @@
 
     if (isset ($_POST['Simpan'])){
     //mulai proses simpan data
-        $sql_simpan = "INSERT INTO tb_pengguna (nama_pengguna,username,password,level) VALUES (
+        $sql_simpan = "INSERT INTO pengguna (nama_pengguna,username,password,level) VALUES (
         '".$_POST['nama_pengguna']."',
         '".$_POST['username']."',
         '".$_POST['password']."',

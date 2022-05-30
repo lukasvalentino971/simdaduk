@@ -97,7 +97,7 @@
 
     if (isset ($_POST['Simpan'])){
     //mulai proses simpan data
-        $sql_simpan = "INSERT INTO tb_pdd (nik, nama, tempat_lh, tgl_lh, jekel, desa, rt, rw, agama, kawin, pekerjaan, status) VALUES (
+        $sql_simpan = "INSERT INTO penduduk (nik, nama, tempat_lh, tgl_lh, jekel, desa, rt, rw, agama, kawin, pekerjaan, status) VALUES (
             '".$_POST['nik']."',
             '".$_POST['nama']."',
 			'".$_POST['tempat_lh']."',

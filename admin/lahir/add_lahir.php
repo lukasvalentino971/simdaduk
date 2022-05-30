@@ -38,7 +38,7 @@
 						<option selected="selected">- Pilih KK -</option>
 						<?php
                         // ambil data dari database
-                        $query = "select * from tb_kk";
+                        $query = "select * from kk";
                         $hasil = mysqli_query($koneksi, $query);
                         while ($row = mysqli_fetch_array($hasil)) {
                         ?>
@@ -66,7 +66,7 @@
 
     if (isset ($_POST['Simpan'])){
     //mulai proses simpan data
-        $sql_simpan = "INSERT INTO tb_lahir (nama, tgl_lh, jekel, id_kk) VALUES (
+        $sql_simpan = "INSERT INTO lahir (nama, tgl_lh, jekel, id_kk) VALUES (
             '".$_POST['nama']."',
 			'".$_POST['tgl_lh']."',
             '".$_POST['jekel']."',

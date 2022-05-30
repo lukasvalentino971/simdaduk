@@ -1,6 +1,6 @@
 <?php
 if(isset($_GET['kode'])){
-            $sql_hapus = "DELETE FROM tb_anggota WHERE id_anggota='".$_GET['kode']."'";
+            $sql_hapus = "DELETE FROM anggota WHERE id_anggota='".$_GET['kode']."'";
             $query_hapus = mysqli_query($koneksi, $sql_hapus);
 
             $kode=$_GET['kode'];

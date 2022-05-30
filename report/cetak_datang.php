@@ -20,13 +20,14 @@
 <body>
 	<center>
 
-		<h2>PEMERINTAH KABUPATEN PERCONTOHAN</h2>
-		<h3>KECAMATAN PERCONTOHAN
-			<br>DESA PERCONTOHAN</h3>
+		<h2>PEMERINTAH KABUPATEN JOMBANG</h2>
+		<h3>KECAMATAN PLANDAAN
+			<br>DESA DARUREJO</h3>
+		<P>Jl. Raya Arjuno No : 37 Telp : -  Kode Pos 61456</p>
 		<p>________________________________________________________________________</p>
 
 		<?php
-			$sql_tampil = "select * from tb_datang
+			$sql_tampil = "select * from datang
 			where id_datang ='$id'";
 			
 			$query_tampil = mysqli_query($koneksi, $sql_tampil);
@@ -39,13 +40,38 @@
 		<h4>
 			<u>SURAT KETARANGAN PENDATANG</u>
 		</h4>
-		<h4>No Surat :
+		<p>Nomor :
 			<?php echo $data['id_datang']; ?>/Ket.Pendatang/
 			<?php echo $tanggal; ?>
-		</h4>
+		<p>
 	</center>
-	<p>Yang bertandatangan dibawah ini Kepala Desa ........., Kecamatan ............., Kabupaten .........., dengan ini menerangkan
-		bahawa :</P>
+	<p>Yang bertandatangan dibawah ini :</P>
+	<table>
+		<tbody>
+			<tr>
+				<td>Nama</td>
+				<td>:</td>
+				<td>
+					UMAR WAHYUDI
+				</td>
+			</tr>
+			<tr>
+				<td>Jabatan</td>
+				<td>:</td>
+				<td>
+					Kepala Desa
+				</td>
+			</tr>
+			<tr>
+				<td>Alamat</td>
+				<td>:</td>
+				<td>
+					Desa Darurejo, Kecamatan Plandaan, Kabupaten Jombang
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>Menerangkan bahwa :</p>
 	<table>
 		<tbody>
 			<tr>
@@ -79,7 +105,7 @@
 			<?php } ?>
 		</tbody>
 	</table>
-	<p>Benar-benar Telah datang dan berencana untuk tinggal di Desa Maju Jaya, Kecamatan Maju Jaya, Kabupuaten Maju Jaya.</P>
+	<p>Benar-benar telah datang dan berencana untuk tinggal di Desa Darurejo, Kecamatan Plandaan, Kabupuaten Jombang.</P>
 	<p>Demikian Surat ini dibuat, agar dapat digunakan sebagaimana mestinya.</P>
 	<br>
 	<br>
@@ -87,16 +113,16 @@
 	<br>
 	<br>
 	<p align="right">
-		Maju Jaya,
+		Darurejo,
 		<?php echo $tgl; ?>
-		<br> KEPALA DESA ...............
+		<br> Kepala Desa
 		<br>
 		<br>
 		<br>
 		<br>
 		<br>
 		<br>
-		<br>(....................................................)
+		<br>UMAR WAHYUDI
 	</p>
 
 

@@ -1,7 +1,7 @@
 <?php
 
     if(isset($_GET['kode'])){
-        $sql_cek = "SELECT * FROM tb_pengguna WHERE id_pengguna='".$_GET['kode']."'";
+        $sql_cek = "SELECT * FROM pengguna WHERE id_pengguna='".$_GET['kode']."'";
         $query_cek = mysqli_query($koneksi, $sql_cek);
         $data_cek = mysqli_fetch_array($query_cek,MYSQLI_BOTH);
     }
@@ -73,7 +73,7 @@
 <?php
 
     if (isset ($_POST['Ubah'])){
-    $sql_ubah = "UPDATE tb_pengguna SET
+    $sql_ubah = "UPDATE pengguna SET
         nama_pengguna='".$_POST['nama_pengguna']."',
         username='".$_POST['username']."',
         password='".$_POST['password']."',

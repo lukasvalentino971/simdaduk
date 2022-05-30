@@ -13,7 +13,7 @@
 						<option selected="selected">- Pilih Data -</option>
 						<?php
 				// ambil data dari database
-				$query = "select * from tb_lahir";
+				$query = "select * from lahir";
 				$hasil = mysqli_query($koneksi, $query);
 				while ($row = mysqli_fetch_array($hasil)) {
 				?>

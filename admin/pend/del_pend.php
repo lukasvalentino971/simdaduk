@@ -1,6 +1,6 @@
 <?php
 if(isset($_GET['kode'])){
-            $sql_hapus = "DELETE FROM tb_pdd WHERE id_pend='".$_GET['kode']."'";
+            $sql_hapus = "DELETE FROM penduduk WHERE id_pend='".$_GET['kode']."'";
             $query_hapus = mysqli_query($koneksi, $sql_hapus);
 
             if ($query_hapus) {

@@ -2,7 +2,7 @@
 
     if(isset($_GET['kode'])){
         $sql_cek = "SELECT d.id_datang, d.nik, d.nama_datang, d.jekel, d.tgl_datang, p.id_pend, p.nama from 
-		tb_datang d inner join tb_pdd p on d.pelapor=p.id_pend WHERE id_datang='".$_GET['kode']."'";
+		datang d inner join penduduk p on d.pelapor=p.id_pend WHERE id_datang='".$_GET['kode']."'";
         $query_cek = mysqli_query($koneksi, $sql_cek);
         $data_cek = mysqli_fetch_array($query_cek,MYSQLI_BOTH);
     }
@@ -72,7 +72,7 @@
 						<option selected="">- Pilih -</option>
 						<?php
                         // ambil data dari database
-                        $query = "select * from tb_pdd";
+                        $query = "select * from penduduk";
                         $hasil = mysqli_query($koneksi, $query);
                         while ($row = mysqli_fetch_array($hasil)) {
                         ?>
@@ -101,7 +101,7 @@
 <?php
 
     if (isset ($_POST['Ubah'])){
-    $sql_ubah = "UPDATE tb_datang SET 
+    $sql_ubah = "UPDATE datang SET 
 		nik='".$_POST['nik']."',
 		nama_datang='".$_POST['nama_datang']."',
 		jekel='".$_POST['jekel']."',

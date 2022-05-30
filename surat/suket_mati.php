@@ -13,7 +13,7 @@
 						<option selected="selected">- Pilih Data -</option>
 						<?php
 				// ambil data dari database
-				$query = "select m.id_mendu, p.nik, p.nama from tb_mendu m inner join tb_pdd p on 
+				$query = "select m.id_mendu, p.nik, p.nama from meninggal_dunia m inner join penduduk p on 
 				m.id_pdd=p.id_pend";
 				$hasil = mysqli_query($koneksi, $query);
 				while ($row = mysqli_fetch_array($hasil)) {

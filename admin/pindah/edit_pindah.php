@@ -2,7 +2,7 @@
 
     if(isset($_GET['kode'])){
         $sql_cek = "SELECT p.nama, d.id_pindah, d.tgl_pindah, d.alasan FROM 
-		tb_pindah d join tb_pdd p on d.id_pdd=p.id_pend WHERE id_pindah='".$_GET['kode']."'";
+		pindah d join penduduk p on d.id_pdd=p.id_pend WHERE id_pindah='".$_GET['kode']."'";
         $query_cek = mysqli_query($koneksi, $sql_cek);
         $data_cek = mysqli_fetch_array($query_cek,MYSQLI_BOTH);
     }
@@ -59,7 +59,7 @@
 <?php
 
     if (isset ($_POST['Ubah'])){
-    $sql_ubah = "UPDATE tb_pindah SET 
+    $sql_ubah = "UPDATE pindah SET 
 		tgl_pindah='".$_POST['tgl_pindah']."',
 		alasan='".$_POST['alasan']."'
 		WHERE id_pindah='".$_POST['id_pindah']."'";

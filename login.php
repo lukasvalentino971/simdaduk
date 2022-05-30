@@ -99,7 +99,7 @@ if (isset($_POST['btnLogin'])) {
 	$password=mysqli_real_escape_string($koneksi,$_POST['password']);
 
 	//query login
-	$sql_login = "SELECT * FROM tb_pengguna WHERE BINARY username='$username' AND password='$password'";
+	$sql_login = "SELECT * FROM pengguna WHERE BINARY username='$username' AND password='$password'";
 	$query_login = mysqli_query($koneksi, $sql_login);
 	$data_login = mysqli_fetch_array($query_login,MYSQLI_BOTH);
 	$jumlah_login = mysqli_num_rows($query_login);

@@ -28,8 +28,8 @@
 					<?php
               $no = 1;
 			  $sql = $koneksi->query("SELECT p.id_pend, p.nik, p.nama, p.jekel, p.desa, p.rt, p.rw, a.id_kk, k.no_kk, k.kepala from 
-			  tb_pdd p left join tb_anggota a on p.id_pend=a.id_pend 
-			  left join tb_kk k on a.id_kk=k.id_kk where status='Ada'");
+			  penduduk p left join anggota a on p.id_pend=a.id_pend 
+			  left join kk k on a.id_kk=k.id_kk where status='Ada'");
               while ($data= $sql->fetch_assoc()) {
             ?>
 

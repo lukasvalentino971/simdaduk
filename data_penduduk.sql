@@ -24,10 +24,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_anggota`
+-- Table structure for table `anggota`
 --
 
-CREATE TABLE `tb_anggota` (
+CREATE TABLE `anggota` (
   `id_anggota` int(11) NOT NULL,
   `id_kk` int(11) NOT NULL,
   `id_pend` int(11) NOT NULL,
@@ -37,10 +37,10 @@ CREATE TABLE `tb_anggota` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_datang`
+-- Table structure for table `datang`
 --
 
-CREATE TABLE `tb_datang` (
+CREATE TABLE `datang` (
   `id_datang` int(11) NOT NULL,
   `nik` varchar(20) NOT NULL,
   `nama_datang` varchar(20) NOT NULL,
@@ -52,10 +52,10 @@ CREATE TABLE `tb_datang` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_kk`
+-- Table structure for table `kk`
 --
 
-CREATE TABLE `tb_kk` (
+CREATE TABLE `kk` (
   `id_kk` int(11) NOT NULL,
   `no_kk` varchar(30) NOT NULL,
   `kepala` varchar(20) NOT NULL,
@@ -70,10 +70,10 @@ CREATE TABLE `tb_kk` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_lahir`
+-- Table structure for table `lahir`
 --
 
-CREATE TABLE `tb_lahir` (
+CREATE TABLE `lahir` (
   `id_lahir` int(11) NOT NULL,
   `nama` varchar(30) NOT NULL,
   `tgl_lh` date NOT NULL,
@@ -84,10 +84,10 @@ CREATE TABLE `tb_lahir` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_mendu`
+-- Table structure for table `meninggal_dunia`
 --
 
-CREATE TABLE `tb_mendu` (
+CREATE TABLE `meninggal_dunia` (
   `id_mendu` int(11) NOT NULL,
   `id_pdd` int(11) NOT NULL,
   `tgl_mendu` date NOT NULL,
@@ -97,10 +97,10 @@ CREATE TABLE `tb_mendu` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_pdd`
+-- Table structure for table `penduduk`
 --
 
-CREATE TABLE `tb_pdd` (
+CREATE TABLE `penduduk` (
   `id_pend` int(11) NOT NULL,
   `nik` varchar(20) NOT NULL,
   `nama` varchar(20) NOT NULL,
@@ -119,10 +119,10 @@ CREATE TABLE `tb_pdd` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_pengguna`
+-- Table structure for table `pengguna`
 --
 
-CREATE TABLE `tb_pengguna` (
+CREATE TABLE `pengguna` (
   `id_pengguna` int(11) NOT NULL,
   `nama_pengguna` varchar(20) NOT NULL,
   `username` varchar(20) NOT NULL,
@@ -131,20 +131,20 @@ CREATE TABLE `tb_pengguna` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_pengguna`
+-- Dumping data for table `pengguna`
 --
 
-INSERT INTO `tb_pengguna` (`id_pengguna`, `nama_pengguna`, `username`, `password`, `level`) VALUES
-(1, ' Irma Maulidia', 'admin', 'admin', 'Administrator'),
-(3, 'Ifa Indrian Ningsih', 'admin2', 'admin2', 'Kaur Pemerintah');
+INSERT INTO `pengguna` (`id_pengguna`, `nama_pengguna`, `username`, `password`, `level`) VALUES
+(1, 'Ifa Indrian Ningsih', 'ifaindria', 'admin', 'Administrator'),
+(3, 'Irma Maulidia', 'irmaulidia', 'admin2', 'Kaur Pemerintah');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_pindah`
+-- Table structure for table `pindah`
 --
 
-CREATE TABLE `tb_pindah` (
+CREATE TABLE `pindah` (
   `id_pindah` int(11) NOT NULL,
   `id_pdd` int(11) NOT NULL,
   `tgl_pindah` date NOT NULL,
@@ -156,56 +156,56 @@ CREATE TABLE `tb_pindah` (
 --
 
 --
--- Indexes for table `tb_anggota`
+-- Indexes for table `anggota`
 --
-ALTER TABLE `tb_anggota`
+ALTER TABLE `anggota`
   ADD PRIMARY KEY (`id_anggota`),
   ADD KEY `tb_anggota_ibfk_1` (`id_pend`),
   ADD KEY `id_kk` (`id_kk`);
 
 --
--- Indexes for table `tb_datang`
+-- Indexes for table `datang`
 --
-ALTER TABLE `tb_datang`
+ALTER TABLE `datang`
   ADD PRIMARY KEY (`id_datang`),
   ADD KEY `pelapor` (`pelapor`);
 
 --
--- Indexes for table `tb_kk`
+-- Indexes for table `kk`
 --
-ALTER TABLE `tb_kk`
+ALTER TABLE `kk`
   ADD PRIMARY KEY (`id_kk`);
 
 --
--- Indexes for table `tb_lahir`
+-- Indexes for table `lahir`
 --
-ALTER TABLE `tb_lahir`
+ALTER TABLE `lahir`
   ADD PRIMARY KEY (`id_lahir`),
   ADD KEY `id_kk` (`id_kk`);
 
 --
--- Indexes for table `tb_mendu`
+-- Indexes for table `meninggal_dunia`
 --
-ALTER TABLE `tb_mendu`
+ALTER TABLE `meninggal_dunia`
   ADD PRIMARY KEY (`id_mendu`),
   ADD KEY `id_pdd` (`id_pdd`);
 
 --
--- Indexes for table `tb_pdd`
+-- Indexes for table `penduduk`
 --
-ALTER TABLE `tb_pdd`
+ALTER TABLE `penduduk`
   ADD PRIMARY KEY (`id_pend`);
 
 --
--- Indexes for table `tb_pengguna`
+-- Indexes for table `pengguna`
 --
-ALTER TABLE `tb_pengguna`
+ALTER TABLE `pengguna`
   ADD PRIMARY KEY (`id_pengguna`);
 
 --
--- Indexes for table `tb_pindah`
+-- Indexes for table `pindah`
 --
-ALTER TABLE `tb_pindah`
+ALTER TABLE `pindah`
   ADD PRIMARY KEY (`id_pindah`),
   ADD KEY `id_pdd` (`id_pdd`);
 
@@ -214,51 +214,51 @@ ALTER TABLE `tb_pindah`
 --
 
 --
--- AUTO_INCREMENT for table `tb_anggota`
+-- AUTO_INCREMENT for table `anggota`
 --
-ALTER TABLE `tb_anggota`
+ALTER TABLE `anggota`
   MODIFY `id_anggota` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT for table `tb_datang`
+-- AUTO_INCREMENT for table `datang`
 --
-ALTER TABLE `tb_datang`
+ALTER TABLE `datang`
   MODIFY `id_datang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `tb_kk`
+-- AUTO_INCREMENT for table `kk`
 --
-ALTER TABLE `tb_kk`
+ALTER TABLE `kk`
   MODIFY `id_kk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `tb_lahir`
+-- AUTO_INCREMENT for table `lahir`
 --
-ALTER TABLE `tb_lahir`
+ALTER TABLE `lahir`
   MODIFY `id_lahir` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `tb_mendu`
+-- AUTO_INCREMENT for table `meninggal_dunia`
 --
-ALTER TABLE `tb_mendu`
+ALTER TABLE `meninggal_dunia`
   MODIFY `id_mendu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `tb_pdd`
+-- AUTO_INCREMENT for table `penduduk`
 --
-ALTER TABLE `tb_pdd`
+ALTER TABLE `penduduk`
   MODIFY `id_pend` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT for table `tb_pengguna`
+-- AUTO_INCREMENT for table `pengguna`
 --
-ALTER TABLE `tb_pengguna`
+ALTER TABLE `pengguna`
   MODIFY `id_pengguna` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `tb_pindah`
+-- AUTO_INCREMENT for table `pindah`
 --
-ALTER TABLE `tb_pindah`
+ALTER TABLE `pindah`
   MODIFY `id_pindah` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
@@ -266,35 +266,35 @@ ALTER TABLE `tb_pindah`
 --
 
 --
--- Constraints for table `tb_anggota`
+-- Constraints for table `anggota`
 --
-ALTER TABLE `tb_anggota`
-  ADD CONSTRAINT `tb_anggota_ibfk_1` FOREIGN KEY (`id_pend`) REFERENCES `tb_pdd` (`id_pend`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `tb_anggota_ibfk_2` FOREIGN KEY (`id_kk`) REFERENCES `tb_kk` (`id_kk`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `anggota`
+  ADD CONSTRAINT `anggota_ibfk_1` FOREIGN KEY (`id_pend`) REFERENCES `penduduk` (`id_pend`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `anggota_ibfk_2` FOREIGN KEY (`id_kk`) REFERENCES `kk` (`id_kk`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `tb_datang`
+-- Constraints for table `datang`
 --
-ALTER TABLE `tb_datang`
-  ADD CONSTRAINT `tb_datang_ibfk_1` FOREIGN KEY (`pelapor`) REFERENCES `tb_pdd` (`id_pend`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `datang`
+  ADD CONSTRAINT `datang_ibfk_1` FOREIGN KEY (`pelapor`) REFERENCES `penduduk` (`id_pend`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `tb_lahir`
+-- Constraints for table `lahir`
 --
-ALTER TABLE `tb_lahir`
-  ADD CONSTRAINT `tb_lahir_ibfk_1` FOREIGN KEY (`id_kk`) REFERENCES `tb_kk` (`id_kk`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `lahir`
+  ADD CONSTRAINT `lahir_ibfk_1` FOREIGN KEY (`id_kk`) REFERENCES `kk` (`id_kk`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `tb_mendu`
+-- Constraints for table `meninggal_dunia`
 --
-ALTER TABLE `tb_mendu`
-  ADD CONSTRAINT `tb_mendu_ibfk_1` FOREIGN KEY (`id_pdd`) REFERENCES `tb_pdd` (`id_pend`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `meninggal_dunia`
+  ADD CONSTRAINT `meninggal_dunia_ibfk_1` FOREIGN KEY (`id_pdd`) REFERENCES `penduduk` (`id_pend`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `tb_pindah`
+-- Constraints for table `pindah`
 --
-ALTER TABLE `tb_pindah`
-  ADD CONSTRAINT `tb_pindah_ibfk_1` FOREIGN KEY (`id_pdd`) REFERENCES `tb_pdd` (`id_pend`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `pindah`
+  ADD CONSTRAINT `pindah_ibfk_1` FOREIGN KEY (`id_pdd`) REFERENCES `penduduk` (`id_pend`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -27,7 +27,7 @@
 					<?php
               $no = 1;
 			  $sql = $koneksi->query("SELECT l.id_lahir, l.nama, l.tgl_lh, l.jekel, k.no_kk, k.kepala from 
-			  tb_lahir l inner join tb_kk k on k.id_kk=l.id_kk");
+			  lahir l inner join kk k on k.id_kk=l.id_kk");
               while ($data= $sql->fetch_assoc()) {
             ?>
 

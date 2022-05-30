@@ -27,7 +27,7 @@
 					<?php
               $no = 1;
 			  $sql = $koneksi->query("SELECT p.id_pend, p.nik, p.nama, d.tgl_pindah, d.alasan, d.id_pindah from 
-			  tb_pindah d inner join tb_pdd p on p.id_pend=d.id_pdd");
+			  pindah d inner join penduduk p on p.id_pend=d.id_pdd");
               while ($data= $sql->fetch_assoc()) {
             ?>
 

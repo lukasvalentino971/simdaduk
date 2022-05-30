@@ -1,7 +1,7 @@
 <?php
 
     if(isset($_GET['kode'])){
-        $sql_cek = "SELECT * FROM tb_kk WHERE id_kk='".$_GET['kode']."'";
+        $sql_cek = "SELECT * FROM kk WHERE id_kk='".$_GET['kode']."'";
         $query_cek = mysqli_query($koneksi, $sql_cek);
 		$data_cek = mysqli_fetch_array($query_cek,MYSQLI_BOTH);
 		
@@ -49,7 +49,7 @@
 						<option selected="selected">- Penduduk -</option>
 						<?php
                         // ambil data dari database
-                        $query = "select * from tb_pdd where status='Ada'";
+                        $query = "select * from penduduk where status='Ada'";
                         $hasil = mysqli_query($koneksi, $query);
                         while ($row = mysqli_fetch_array($hasil)) {
                         ?>
@@ -96,7 +96,7 @@
 							<?php
               $no = 1;
 			  $sql = $koneksi->query("SELECT p.nik, p.nama, p.jekel, a.hubungan, a.id_anggota 
-			  from tb_pdd p inner join tb_anggota a on p.id_pend=a.id_pend where status='Ada' and id_kk=$karkel");
+			  from penduduk p inner join anggota a on p.id_pend=a.id_pend where status='Ada' and id_kk=$karkel");
               while ($data= $sql->fetch_assoc()) {
             ?>
 
@@ -140,7 +140,7 @@
 
     if (isset ($_POST['Simpan'])){
     //mulai proses simpan data
-        $sql_simpan = "INSERT INTO tb_anggota (id_kk, id_pend, hubungan) VALUES (
+        $sql_simpan = "INSERT INTO anggota (id_kk, id_pend, hubungan) VALUES (
             '".$_POST['id_kk']."',
             '".$_POST['id_pend']."',
             '".$_POST['hubungan']."')";
