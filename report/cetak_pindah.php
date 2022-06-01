@@ -99,7 +99,7 @@
 			<?php } ?>
 		</tbody>
 	</table>
-	<p>Telah benar-benar Pindah dari Desa ..........., Kecamatan ............, Kabupuaten ....................</P>
+	<p>Telah benar-benar Pindah dari Desa Darurejo, Kecamatan Plandaan, Kabupuaten Jombang</P>
 	<p>Demikian surat keterangan ini dibuat dengan sebenarnya dan dapat dipergunakan sebagaimana mestinya.</P>
 	<br>
 	<br>

@@ -96,7 +96,7 @@
 			<?php } ?>
 		</tbody>
 	</table>
-	<p>Telah benar-benar Lahir di Desa ..........., Kecamatan ..........., Kabupuaten ................</P>
+	<p>Telah benar-benar Lahir di Desa Darurejo, Kecamatan Plandaan, Kabupuaten Jombang</P>
 	<p>Demikian surat keterangan ini dibuat dengan sebenarnya dan dapat dipergunakan sebagaimana mestinya.</P>
 	<br>
 	<br>

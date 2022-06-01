@@ -99,7 +99,7 @@
 			<?php } ?>
 		</tbody>
 	</table>
-	<p>Adalah benar-benar warga Desa ......., Kecamatan ..........., Kabupuaten ..............</P>
+	<p>Adalah benar-benar warga Desa Darurejo, Kecamatan Plandaan, Kabupuaten Jombang</P>
 	<p>Demikian surat keterangan ini dibuat dengan sebenarnya dan dapat dipergunakan sebagaimana mestinya.</P>
 	<br>
 	<br>
