@@ -534,6 +534,12 @@
 				case 'view-pend':
 					include "admin/pend/view_pend.php";
 					break;
+				case 'data-laki':
+					include "admin/laki/view_laki.php";
+					break;
+				case 'data-pr':
+					include "admin/laki/view_per.php";
+					break;
 
 				//lahir
 				case 'data-lahir':

@@ -94,7 +94,7 @@
 			<div class="icon">
 				<i class="ion ion-male"></i>
 			</div>
-			<a href="index.php?page=data-izin" class="small-box-footer">Selengkapnya
+			<a href="index.php?page=data-laki" class="small-box-footer">Selengkapnya
 				<i class="fas fa-arrow-circle-right"></i>
 			</a>
 		</div>
@@ -113,7 +113,7 @@
 			<div class="icon">
 				<i class="ion ion-female"></i>
 			</div>
-			<a href="index.php?page=log-izin" class="small-box-footer">Selengkapnya
+			<a href="index.php?page=data-pr" class="small-box-footer">Selengkapnya
 				<i class="fas fa-arrow-circle-right"></i>
 			</a>
 		</div>
@@ -170,7 +170,7 @@
 			<div class="icon">
 				<i class="ion ion-android-download"></i>
 			</div>
-			<a href="index.php?page=data-izin" class="small-box-footer">Selengkapnya
+			<a href="index.php?page=data-datang" class="small-box-footer">Selengkapnya
 				<i class="fas fa-arrow-circle-right"></i>
 			</a>
 		</div>
@@ -189,10 +189,12 @@
 			<div class="icon">
 				<i class="ion ion-android-upload"></i>
 			</div>
-			<a href="index.php?page=log-izin" class="small-box-footer">Selengkapnya
+			<a href="index.php?page=data-pindah" class="small-box-footer">Selengkapnya
 				<i class="fas fa-arrow-circle-right"></i>
 			</a>
 		</div>
 	</div>
 
 </div>
+
+
