@@ -219,56 +219,6 @@
 							</ul>
 						</li>
 
-
-						<!-- <li class="nav-item has-treeview">
-							<a href="#" class="nav-link">
-								<i class="nav-icon fas fa-print"></i>
-								<p>
-									Kelola Laporan
-									<i class="fas fa-angle-left right"></i>
-								</p>
-							</a>
-							<ul class="nav nav-treeview">
-
-								<li class="nav-item">
-									<a href="#" class="nav-link">
-										<i class="nav-icon far fa-circle text-warning"></i>
-										<p>Data Penduduk</p>
-									</a>
-								</li>
-								<li class="nav-item">
-									<a href="?page=suket-datang" class="nav-link">
-										<i class="nav-icon far fa-circle text-warning"></i>
-										<p>Data Kartu Keluarga</p>
-									</a>
-								</li>
-								<li class="nav-item">
-									<a href="#" class="nav-link">
-										<i class="nav-icon far fa-circle text-warning"></i>
-										<p>Data Lahir</p>
-									</a>
-								</li>
-								<li class="nav-item">
-									<a href="?page=cetak_mati" class="nav-link">
-										<i class="nav-icon far fa-circle text-warning"></i>
-										<p>Data Meninggal</p>
-									</a>
-								</li>
-								<li class="nav-item">
-									<a href="#" class="nav-link">
-										<i class="nav-icon far fa-circle text-warning"></i>
-										<p>Data Pendatang</p>
-									</a>
-								</li>
-								<li class="nav-item">
-									<a href="#" class="nav-link">
-										<i class="nav-icon far fa-circle text-warning"></i>
-										<p>Data Pindah</p>
-									</a>
-								</li>
-							</ul>
-						</li> -->
-
 						<li class="nav-header">Setting</li>
 
 						<li class="nav-item">
@@ -396,55 +346,6 @@
 								</li>
 							</ul>
 						</li>
-
-						<!-- <li class="nav-item has-treeview">
-							<a href="#" class="nav-link">
-								<i class="nav-icon fas fa-print"></i>
-								<p>
-									Kelola Laporan
-									<i class="fas fa-angle-left right"></i>
-								</p>
-							</a>
-							<ul class="nav nav-treeview">
-
-								<li class="nav-item">
-									<a href="#" class="nav-link">
-										<i class="nav-icon far fa-circle text-warning"></i>
-										<p>Data Penduduk</p>
-									</a>
-								</li>
-								<li class="nav-item">
-									<a href="#" class="nav-link">
-										<i class="nav-icon far fa-circle text-warning"></i>
-										<p>Data Kartu Keluarga</p>
-									</a>
-								</li>
-								<li class="nav-item">
-									<a href="#" class="nav-link">
-									    <i class="nav-icon far fa-circle text-warning"></i>
-										<p>Data Lahir</p>
-									</a>
-								</li>
-								<li class="nav-item">
-									<a href="#" class="nav-link">
-										<i class="nav-icon far fa-circle text-warning"></i>
-										<p>Data Meninggal</p>
-									</a>
-								</li>
-								<li class="nav-item">
-									<a href="#" class="nav-link">
-										<i class="nav-icon far fa-circle text-warning"></i>
-										<p>Data Pendatang</p>
-									</a>
-								</li>
-								<li class="nav-item">
-									<a href="#" class="nav-link">
-										<i class="nav-icon far fa-circle text-warning"></i>
-										<p>Data Pindah</p>
-									</a>
-								</li>
-							</ul>
-						</li> -->
 
 						<li class="nav-header">Setting</li>
 
