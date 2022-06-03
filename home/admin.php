@@ -132,7 +132,7 @@
 			<div class="icon">
 				<i class="ion ion-android-happy"></i>
 			</div>
-			<a href="index.php?page=data-pend" class="small-box-footer">Selengkapnya
+			<a href="index.php?page=data-lahir" class="small-box-footer">Selengkapnya
 				<i class="fas fa-arrow-circle-right"></i>
 			</a>
 		</div>
@@ -151,7 +151,7 @@
 			<div class="icon">
 				<i class="ion ion-android-sad"></i>
 			</div>
-			<a href="index.php?page=data-kartu" class="small-box-footer">Selengkapnya
+			<a href="index.php?page=data-mendu" class="small-box-footer">Selengkapnya
 				<i class="fas fa-arrow-circle-right"></i>
 			</a>
 		</div>

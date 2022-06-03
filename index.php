@@ -658,7 +658,7 @@
 			<div class="float-right d-none d-sm-block">
 				Copyright &copy;
 				<a target="_blank" href="https://www.youtube.com/channel/UCDxjOzW7F0JOkltlXT6g7AQ">
-					<strong> Ifa & Irma</strong>
+					<strong> TIM POPSYS</strong>
 				</a>
 				All rights reserved.
 			</div>
