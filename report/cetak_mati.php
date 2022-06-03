@@ -27,7 +27,7 @@
 		<p>________________________________________________________________________</p>
 
 		<?php
-			$sql_tampil = "select m.id_mendu, m.tgl_mendu, m.sebab, p.nik, p.nama from meninggal_dunia m inner join penduduk p on 
+			$sql_tampil = "select m.id_mendu, m.tgl_mendu, m.sebab, p.nik, p.nama, p.jekel, p.tempat_lh, p.tgl_lh, p.pekerjaan, p.agama, p.desa, p.rt, p.rw from meninggal_dunia m inner join penduduk p on 
 			m.id_pdd=p.id_pend
 			where id_mendu ='$id'";
 			
@@ -129,7 +129,7 @@
 				<td>Alamat</td>
 				<td>:</td>
 				<td>
-					(belum)
+					Dusun <?php echo $data['desa']; ?>, RT <?php echo $data['rt']; ?>, RW <?php echo $data['rw']; ?>
 				</td>
 			</tr>
 			<tr>
@@ -154,8 +154,6 @@
 	</table>
 	<!-- bagian ini kurang data Pelapor, tambahin sesuai format surat-->
 	<p>Demikian surat keterangan ini dibuat dengan sebenarnya dan dapat dipergunakan sebagaimana mestinya.</P>
-	<br>
-	<br>
 	<br>
 	<br>
 	<br>
