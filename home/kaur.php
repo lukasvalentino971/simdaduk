@@ -10,12 +10,12 @@
     $kartu=$data['kartu'];
   }
 
-  $sql = $koneksi->query("SELECT COUNT(id_pend) as laki  from penduduk where jekel='LK'");
+  $sql = $koneksi->query("SELECT COUNT(id_pend) as laki  from penduduk where jekel='LK' and status='ada'");
   while ($data= $sql->fetch_assoc()) {
     $laki=$data['laki'];
   }
 
-  $sql = $koneksi->query("SELECT COUNT(id_pend) as prem  from penduduk where jekel='PR'");
+  $sql = $koneksi->query("SELECT COUNT(id_pend) as prem  from penduduk where jekel='PR' and status='ada'");
   while ($data= $sql->fetch_assoc()) {
     $prem=$data['prem'];
   }
