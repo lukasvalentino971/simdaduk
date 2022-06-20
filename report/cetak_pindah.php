@@ -2,7 +2,7 @@
 	include "../inc/koneksi.php";
 	
 	if (isset ($_POST['Cetak'])){
-	$id = $_POST['id_pend'];
+	$id = $_POST['id_pindah'];
 	}
 
 	$tanggal = date("m/y");
@@ -27,9 +27,11 @@
 		<p>________________________________________________________________________</p>
 
 		<?php
-			$sql_tampil = "select * from penduduk
-			where status='Pindah' and id_pend ='$id'";
-			
+
+			$sql_tampil = "select d.id_pindah, d.tgl_pindah, d.alasan, d.dusun, d.rt, d.rw, d.desa, d.kecamatan, d.kabupaten, p.nik, p.nama, p.tempat_lh, p.tgl_lh from pindah d inner join penduduk p on 
+			d.id_pdd=p.id_pend
+			where id_pindah ='$id'";
+				
 			$query_tampil = mysqli_query($koneksi, $sql_tampil);
 			$no=1;
 			while ($data = mysqli_fetch_array($query_tampil,MYSQLI_BOTH)) {
@@ -41,7 +43,7 @@
 			<u>SURAT KETARANGAN PINDAH</u>
 		</h4>
 		<p>Nomor :
-			<?php echo $data['id_pend']; ?>/Ket.Pindah/
+			<?php echo $data['id_pindah']; ?>/Ket.Pindah/
 			<?php echo $tanggal; ?>
 		<p>
 	</center>
@@ -96,27 +98,31 @@
 					<?php echo $data['tgl_lh']; ?>
 				</td>
 			</tr>
-			<?php } ?>
+			
 		</tbody>
 	</table>
-	<p>Telah benar-benar Pindah dari Desa Darurejo, Kecamatan Plandaan, Kabupuaten Jombang</P>
+	<p>Adalah benar penduduk Desa Darurejo, Kecamatan Plandaan, Kabupuaten Jombang karena atas permintaan sendiri kepadanya Surat Keterangan Pindah 
+		ke Dusun <?php echo $data['dusun']; ?>, RT <?php echo $data['rt']; ?>, RW <?php echo $data['rw']; ?>, Desa <?php echo $data['desa']; ?>, 
+		Kecamatan <?php echo $data['kecamatan']; ?>, Kabupaten <?php echo $data['kabupaten']; ?> dengan alasan <?php echo $data['alasan']; ?>
+	</P>
+	<?php } ?>
 	<p>Demikian surat keterangan ini dibuat dengan sebenarnya dan dapat dipergunakan sebagaimana mestinya.</P>
 	<br>
 	<br>
-	<br>
-	<br>
-	<br>
-	<p align="right">
-		Darurejo,
-		<?php echo $tgl; ?>
-		<br> Kepala Desa
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>UMAR WAHYUDI
+	<p>
+		<div align="right">
+			Darurejo,
+			<?php echo $tgl; ?>
+			<br> Kepala Desa
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>UMAR WAHYUDI
+		</div>
+		
 	</p>
 
 

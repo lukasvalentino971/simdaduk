@@ -9,15 +9,17 @@
 			<div class="form-group row">
 				<label class="col-sm-2 col-form-label">Penduduk</label>
 				<div class="col-sm-6">
-					<select name="id_pend" id="id_pend" class="form-control select2bs4" required>
+					<select name="id_pindah" id="id_pindah" class="form-control select2bs4" required>
 						<option selected="selected">- Pilih Data -</option>
 						<?php
 				// ambil data dari database
-				$query = "select * from penduduk where status='Pindah'";
+
+				$query = "select d.id_pindah, p.nik, p.nama from pindah d inner join penduduk p on 
+				d.id_pdd=p.id_pend";
 				$hasil = mysqli_query($koneksi, $query);
 				while ($row = mysqli_fetch_array($hasil)) {
 				?>
-						<option value="<?php echo $row['id_pend'] ?>">
+						<option value="<?php echo $row['id_pindah'] ?>">
 							<?php echo $row['nik'] ?>
 							-
 							<?php echo $row['nama'] ?>
