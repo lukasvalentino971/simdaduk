@@ -45,13 +45,16 @@
 			</div>
 
 			<div class="form-group row">
-				<label class="col-sm-2 col-form-label">Alamat Pindah</label>
-			</div>
-
-			<div class="form-group row">
 				<label class="col-sm-2 col-form-label">Dusun</label>
 				<div class="col-sm-4">
 					<input type="text" class="form-control" id="dusun" name="dusun" placeholder="Dusun" required>
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Desa</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="desa" name="desa" placeholder="Desa" required>
 				</div>
 			</div>
 
@@ -66,13 +69,6 @@
 				<label class="col-sm-2 col-form-label">RW</label>
 				<div class="col-sm-1">
 					<input type="text" class="form-control" id="rw" name="rw" placeholder="RW" required>
-				</div>
-			</div>
-
-			<div class="form-group row">
-				<label class="col-sm-2 col-form-label">Desa</label>
-				<div class="col-sm-4">
-					<input type="text" class="form-control" id="desa" name="desa" placeholder="Desa" required>
 				</div>
 			</div>
 
