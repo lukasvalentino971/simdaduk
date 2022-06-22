@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Jan 12, 2021 at 05:57 AM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.0
+-- Host: 127.0.0.1
+-- Generation Time: Jun 01, 2022 at 08:43 AM
+-- Server version: 10.4.20-MariaDB
+-- PHP Version: 8.0.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -49,6 +49,13 @@ CREATE TABLE `datang` (
   `pelapor` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `datang`
+--
+
+INSERT INTO `datang` (`id_datang`, `nik`, `nama_datang`, `jekel`, `tgl_datang`, `pelapor`) VALUES
+(3, '3517025689763407', 'Marissa Claudia', 'PR', '2022-04-02', 18);
+
 -- --------------------------------------------------------
 
 --
@@ -67,6 +74,13 @@ CREATE TABLE `kk` (
   `prov` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `kk`
+--
+
+INSERT INTO `kk` (`id_kk`, `no_kk`, `kepala`, `desa`, `rt`, `rw`, `kec`, `kab`, `prov`) VALUES
+(6, '3517150278120001', 'Irmansyah', 'Klampisan', '01', '04', 'Plandaan', 'Jombang', 'Jawa Timur');
+
 -- --------------------------------------------------------
 
 --
@@ -81,6 +95,13 @@ CREATE TABLE `lahir` (
   `id_kk` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `lahir`
+--
+
+INSERT INTO `lahir` (`id_lahir`, `nama`, `tgl_lh`, `jekel`, `id_kk`) VALUES
+(3, 'Abida Anradella', '2021-09-11', 'PR', 6);
+
 -- --------------------------------------------------------
 
 --
@@ -93,6 +114,13 @@ CREATE TABLE `meninggal_dunia` (
   `tgl_mendu` date NOT NULL,
   `sebab` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `meninggal_dunia`
+--
+
+INSERT INTO `meninggal_dunia` (`id_mendu`, `id_pdd`, `tgl_mendu`, `sebab`) VALUES
+(3, 17, '2022-06-01', 'Kecelakaan');
 
 -- --------------------------------------------------------
 
@@ -115,6 +143,22 @@ CREATE TABLE `penduduk` (
   `pekerjaan` varchar(30) NOT NULL,
   `status` enum('Ada','Meninggal','Pindah') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `penduduk`
+--
+
+INSERT INTO `penduduk` (`id_pend`, `nik`, `nama`, `tempat_lh`, `tgl_lh`, `jekel`, `desa`, `rt`, `rw`, `agama`, `kawin`, `pekerjaan`, `status`) VALUES
+(14, '3517456830971701', 'Siti Sulastri', 'Jombang', '2000-03-17', 'PR', 'Klitih', '03', '03', 'Islam', 'Belum', 'Mahasiswa', 'Ada'),
+(15, '3517075429186237', 'Abdullah ', 'Jombang', '1960-05-07', 'LK', 'Klagen', '05', '02', 'Islam', 'Sudah', 'Pensiunan Pns', 'Ada'),
+(16, '3517097643200003', 'Ricky Gunawan', 'Jombang', '2000-01-11', 'LK', 'Klagen', '04', '02', 'Islam', 'Belum', 'Pelajar', 'Ada'),
+(17, '3517030932100002', 'Subandi', 'Jombang', '1968-05-25', 'LK', 'Tempel', '01', '01', 'Islam', 'Sudah', 'Petani', 'Meninggal'),
+(18, '3517150220170001', 'Saiti', 'Jombang', '1966-04-12', 'PR', 'Tempel', '01', '01', 'Islam', 'Sudah', 'Petani', 'Ada'),
+(19, '3517025689763407', 'Marissa Claudia', 'Jombang', '1999-12-12', 'PR', 'Klampisan', '01', '04', 'Kristen', 'Belum', 'Perawat', 'Ada'),
+(20, '3517238917650005', 'Abida Anradella', 'Jombang', '2021-09-11', 'PR', 'Klampisan', '01', '04', 'Islam', 'Belum', 'Belum Bekerja', 'Ada'),
+(21, '3517215171010002', 'Irmansyah', 'Jombang', '1985-11-17', 'LK', 'Klampisan', '01', '04', 'Islam', 'Sudah', 'Swasta', 'Ada'),
+(22, '3517645167100002', 'Rizki Ridwan', 'Jombang', '1997-11-20', 'LK', 'Klagen', '09', '02', 'Islam', 'Sudah', 'Swasta', 'Pindah'),
+(23, '3517555201680001', 'Naura Putri', 'Jombang', '1996-07-15', 'PR', 'Klagen', '04', '02', 'Islam', 'Sudah', 'IT engineer', 'Ada');
 
 -- --------------------------------------------------------
 
@@ -150,6 +194,13 @@ CREATE TABLE `pindah` (
   `tgl_pindah` date NOT NULL,
   `alasan` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pindah`
+--
+
+INSERT INTO `pindah` (`id_pindah`, `id_pdd`, `tgl_pindah`, `alasan`) VALUES
+(3, 22, '2022-04-10', 'Pekerjaan');
 
 --
 -- Indexes for dumped tables
@@ -223,31 +274,31 @@ ALTER TABLE `anggota`
 -- AUTO_INCREMENT for table `datang`
 --
 ALTER TABLE `datang`
-  MODIFY `id_datang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_datang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `kk`
 --
 ALTER TABLE `kk`
-  MODIFY `id_kk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_kk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `lahir`
 --
 ALTER TABLE `lahir`
-  MODIFY `id_lahir` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_lahir` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `meninggal_dunia`
 --
 ALTER TABLE `meninggal_dunia`
-  MODIFY `id_mendu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_mendu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `penduduk`
 --
 ALTER TABLE `penduduk`
-  MODIFY `id_pend` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_pend` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `pengguna`
@@ -259,7 +310,7 @@ ALTER TABLE `pengguna`
 -- AUTO_INCREMENT for table `pindah`
 --
 ALTER TABLE `pindah`
-  MODIFY `id_pindah` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_pindah` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables

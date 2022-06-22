@@ -17,10 +17,14 @@
 						<th>No</th>
 						<th>NIK</th>
 						<th>Nama</th>
-						<th>Tanggal</th>
+						<th>Tanggal Pindah</th>
 						<th>Alasan</th>
-						<th>Alamat Pindah</th>
-						<th>Aksi</th>
+						<th>Dusun</th>
+						<th>Desa</th>
+						<th>Rt</th>
+						<th>Rw</th>
+						<th>Kecamatan</th>
+						<th>Kabupaten</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -49,7 +53,22 @@
 							<?php echo $data['alasan']; ?>
 						</td>
 						<td>
-							Dusun <?php echo $data['dusun']; ?>, RT <?php echo $data['rt']; ?>, RW <?php echo $data['rw']; ?>, Desa <?php echo $data['desa']; ?>, Kecamatan <?php echo $data['kecamatan']; ?>, Kabupaten <?php echo $data['kabupaten']; ?>
+							<?php echo $data['dusun']; ?>
+						</td>
+						<td>
+							<?php echo $data['desa']; ?>
+						</td>
+						<td>
+							<?php echo $data['rt']; ?>
+						</td>
+						<td>
+							<?php echo $data['rw']; ?>
+						</td>
+						<td>
+							<?php echo $data['kecamatan']; ?>
+						</td>
+						<td>
+							<?php echo $data['kabupaten']; ?>
 						</td>
 						<td>
 							<a href="?page=edit-pindah&kode=<?php echo $data['id_pindah']; ?>" title="Ubah"
