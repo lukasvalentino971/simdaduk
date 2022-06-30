@@ -61,6 +61,48 @@
 				</div>
 			</div>
 
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Dusun</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="dusun" name="dusun" placeholder="Dusun Asal" required>
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Desa</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="desa" name="desa" placeholder="Desa Asal" required>
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">RT</label>
+				<div class="col-sm-1">
+					<input type="text" class="form-control" id="rt" name="rt" placeholder="RT Asal" required>
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">RW</label>
+				<div class="col-sm-1">
+					<input type="text" class="form-control" id="rw" name="rw" placeholder="RW Asal" required>
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Kecamatan</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="kecamatan" name="kecamatan" placeholder="kecamatan Asal" required>
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Kabupaten</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="kabupaten" name="kabupaten" placeholder="kabupaten Asal" required>
+				</div>
+			</div>
+
 		</div>
 		<div class="card-footer">
 			<input type="submit" name="Simpan" value="Simpan" class="btn btn-info">
@@ -73,12 +115,18 @@
 
     if (isset ($_POST['Simpan'])){
     //mulai proses simpan data
-        $sql_simpan = "INSERT INTO datang (nik, nama_datang, jekel, tgl_datang, pelapor) VALUES (
+        $sql_simpan = "INSERT INTO datang (nik, nama_datang, jekel, tgl_datang, pelapor, dusun, desa, rt, rw, kecamatan, kabupaten) VALUES (
 			'".$_POST['nik']."',
 			'".$_POST['nama_datang']."',
 			'".$_POST['jekel']."',
 			'".$_POST['tgl_datang']."',
-            '".$_POST['pelapor']."')";
+            '".$_POST['pelapor']."',
+			'".$_POST['dusun']."',
+			'".$_POST['desa']."',
+			'".$_POST['rt']."',
+            '".$_POST['rw']."',
+            '".$_POST['kecamatan']."',
+            '".$_POST['kabupaten']."')";
 		$query_simpan = mysqli_query($koneksi, $sql_simpan);
         mysqli_close($koneksi);
 

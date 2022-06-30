@@ -1,7 +1,7 @@
 <?php
 
     if(isset($_GET['kode'])){
-        $sql_cek = "SELECT d.id_datang, d.nik, d.nama_datang, d.jekel, d.tgl_datang, p.id_pend, p.nama from 
+        $sql_cek = "SELECT d.id_datang, d.nik, d.nama_datang, d.jekel, d.tgl_datang, d.dusun, d.desa, d.rt, d.rw, d.kecamatan, d.kabupaten, p.id_pend, p.nama from 
 		datang d inner join penduduk p on d.pelapor=p.id_pend WHERE id_datang='".$_GET['kode']."'";
         $query_cek = mysqli_query($koneksi, $sql_cek);
         $data_cek = mysqli_fetch_array($query_cek,MYSQLI_BOTH);
@@ -89,6 +89,60 @@
 				</div>
 			</div>
 
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Alamat Asal</label>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Dusun</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="dusun" name="dusun" value="<?php echo $data_cek['dusun']; ?>"
+					 required>
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Desa</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="desa" name="desa" value="<?php echo $data_cek['desa']; ?>"
+					 required>
+				</div>
+			</div>
+
+
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">RT</label>
+				<div class="col-sm-1">
+					<input type="text" class="form-control" id="rt" name="rt" value="<?php echo $data_cek['rt']; ?>"
+					 required>
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">RW</label>
+				<div class="col-sm-1">
+					<input type="text" class="form-control" id="rw" name="rw" value="<?php echo $data_cek['rw']; ?>"
+					 required>
+				</div>
+			</div>
+
+		
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Kecamatan</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="kecamatan" name="kecamatan" value="<?php echo $data_cek['kecamatan']; ?>"
+					 required>
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Kabupaten</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="kabupaten" name="kabupaten" value="<?php echo $data_cek['kabupaten']; ?>"
+					 required>
+				</div>
+			</div>
+
 
 		</div>
 		<div class="card-footer">
@@ -106,7 +160,13 @@
 		nama_datang='".$_POST['nama_datang']."',
 		jekel='".$_POST['jekel']."',
 		tgl_datang='".$_POST['tgl_datang']."',
-		pelapor='".$_POST['pelapor']."'
+		pelapor='".$_POST['pelapor']."',
+		dusun='".$_POST['dusun']."',
+		desa='".$_POST['desa']."',
+		rt='".$_POST['rt']."',
+		rw='".$_POST['rw']."',
+		kecamatan='".$_POST['kecamatan']."',
+		kabupaten='".$_POST['kabupaten']."'
 		WHERE id_datang='".$_POST['id_datang']."'";
     $query_ubah = mysqli_query($koneksi, $sql_ubah);
     mysqli_close($koneksi);

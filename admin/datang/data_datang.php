@@ -19,6 +19,12 @@
 						<th>Nama</th>
 						<th>Jekel</th>
 						<th>Tanggal</th>
+						<th>Dusun</th>
+						<th>Desa</th>
+						<th>RT</th>
+						<th>RW</th>
+						<th>Kecamatan</th>
+						<th>Kabupaten</th>
 						<th>Pelapor</th>
 						<th>Aksi</th>
 					</tr>
@@ -27,7 +33,7 @@
 
 					<?php
               $no = 1;
-			  $sql = $koneksi->query("SELECT d.id_datang, d.nik, d.nama_datang, d.jekel, d.tgl_datang, p.nama from 
+			  $sql = $koneksi->query("SELECT d.id_datang, d.nik, d.nama_datang, d.jekel, d.tgl_datang, d.dusun, d.desa, d.rt, d.rw, d.kecamatan, d.kabupaten, p.nama from 
 			  datang d inner join penduduk p on d.pelapor=p.id_pend");
               while ($data= $sql->fetch_assoc()) {
             	?>
@@ -47,6 +53,24 @@
 						</td>
 						<td>
 							<?php echo $data['tgl_datang']; ?>
+						</td>
+						<td>
+							<?php echo $data['dusun']; ?>
+						</td>
+						<td>
+							<?php echo $data['desa']; ?>
+						</td>
+						<td>
+							<?php echo $data['rt']; ?>
+						</td>
+						<td>
+							<?php echo $data['rw']; ?>
+						</td>
+						<td>
+							<?php echo $data['kecamatan']; ?>
+						</td>
+						<td>
+							<?php echo $data['kabupaten']; ?>
 						</td>
 						<td>
 							<?php echo $data['nama']; ?>
