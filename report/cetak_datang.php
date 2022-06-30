@@ -27,7 +27,7 @@
 		<p>________________________________________________________________________</p>
 
 		<?php
-		$sql_tampil = "select d.id_datang, d.tgl_datang, d.pelapor, d.dusun, d.rt, d.rw, d.desa, d.kecamatan, d.kabupaten, p.nik, p.nama from datang d inner join penduduk p on 
+		$sql_tampil = "select d.id_datang, d.tgl_datang, d.pelapor, d.dusun, d.desa, d.rt, d.rw, d.kecamatan, d.kabupaten, p.nik, p.nama from datang d inner join penduduk p on 
 		d.id_datang=p.id_pend
 		where id_pindah ='$id'";
 			// $sql_tampil = "select * from datang
