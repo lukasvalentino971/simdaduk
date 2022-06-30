@@ -27,8 +27,11 @@
 		<p>________________________________________________________________________</p>
 
 		<?php
-			$sql_tampil = "select * from datang
-			where id_datang ='$id'";
+		$sql_tampil = "select d.id_datang, d.tgl_datang, d.pelapor, d.dusun, d.rt, d.rw, d.desa, d.kecamatan, d.kabupaten, p.nik, p.nama from datang d inner join penduduk p on 
+		d.id_datang=p.id_pend
+		where id_pindah ='$id'";
+			// $sql_tampil = "select * from datang
+			// where id_datang ='$id'";
 			
 			$query_tampil = mysqli_query($koneksi, $sql_tampil);
 			$no=1;
@@ -105,7 +108,10 @@
 			<?php } ?>
 		</tbody>
 	</table>
-	<p>Benar-benar telah datang dan berencana untuk tinggal di Desa Darurejo, Kecamatan Plandaan, Kabupuaten Jombang.</P>
+	<p>Berasal dari Dusun <?php echo $data['dusun']; ?>, RT <?php echo $data['rt']; ?>, RW <?php echo $data['rw']; ?>, Desa <?php echo $data['desa']; ?>, 
+		Kecamatan <?php echo $data['kecamatan']; ?>, Kabupaten <?php echo $data['kabupaten']; ?> Benar-benar telah datang dan berencana untuk tinggal 
+		di Desa Darurejo, Kecamatan Plandaan, Kabupuaten Jombang.</P>
+		
 	<p>Demikian Surat ini dibuat, agar dapat digunakan sebagaimana mestinya.</P>
 	<br>
 	<br>
