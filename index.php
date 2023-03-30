@@ -44,6 +44,7 @@
 </head>
 
 <body class="hold-transition sidebar-mini">
+	<!-- hallo -->
 	<!-- Site wrapper -->
 	<div class="wrapper">
 		<!-- Navbar -->
