@@ -1,7 +1,7 @@
 <div class="card card-primary">
 	<div class="card-header">
 		<h3 class="card-title">
-			<i class="fa fa-file"></i> Su-Ket Domisili</h3>
+			<i class="fa fa-file"></i> Su-Ket Tidak Mampu</h3>
 	</div>
 	<form action="./report/cetak_sktm.php" method="post" enctype="multipart/form-data">
 		<div class="card-body">

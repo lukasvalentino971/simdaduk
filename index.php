@@ -226,6 +226,15 @@
 							</ul>
 						</li>
 
+						<li class="nav-item">
+							<a href="index.php" class="nav-link">
+							<i class="nav-icon fas fa-envelope"></i>
+								<p>
+									Permintaan
+								</p>
+							</a>
+						</li>
+
 						<li class="nav-header">Setting</li>
 
 						<li class="nav-item">
@@ -358,6 +367,15 @@
 									</a>
 								</li>
 							</ul>
+						</li>
+
+						<li class="nav-item">
+							<a href="index.php" class="nav-link">
+							<i class="nav-icon fas fa-envelope"></i>
+								<p>
+									Permintaan
+								</p>
+							</a>
 						</li>
 
 						<li class="nav-header">Setting</li>
