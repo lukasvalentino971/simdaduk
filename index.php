@@ -217,6 +217,12 @@
 										<p>Su-Ket Pindah</p>
 									</a>
 								</li>
+								<li class="nav-item">
+									<a href="?page=suket-tidak-mampu" class="nav-link">
+										<i class="nav-icon far fa-circle text-warning"></i>
+										<p>Su-Ket Tidak Mampu</p>
+									</a>
+								</li>
 							</ul>
 						</li>
 
@@ -343,6 +349,12 @@
 									<a href="?page=suket-pindah" class="nav-link">
 										<i class="nav-icon far fa-circle text-warning"></i>
 										<p>Su-Ket Pindah</p>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="?page=suket-tidak-mampu" class="nav-link">
+										<i class="nav-icon far fa-circle text-warning"></i>
+										<p>Su-Ket Tidak Mampu</p>
 									</a>
 								</li>
 							</ul>
@@ -531,6 +543,9 @@
 					break;
 				case 'suket-pindah':
 					include "surat/suket_pindah.php";
+					break;
+				case 'suket-tidak-mampu':
+					include "";
 					break;
 
           
