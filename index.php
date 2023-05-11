@@ -227,7 +227,7 @@
 						</li>
 
 						<li class="nav-item">
-							<a href="index.php" class="nav-link">
+							<a href="?pesan-permintaan" class="nav-link">
 							<i class="nav-icon fas fa-envelope"></i>
 								<p>
 									Permintaan
@@ -370,7 +370,7 @@
 						</li>
 
 						<li class="nav-item">
-							<a href="index.php" class="nav-link">
+							<a href="?page=pesan-permintaan" class="nav-link">
 							<i class="nav-icon fas fa-envelope"></i>
 								<p>
 									Permintaan
@@ -564,6 +564,11 @@
 					break;
 				case 'suket-tidak-mampu':
 					include "surat/suket_tidak_mampu.php";
+					break;
+				
+				//pesan permintaan
+				case 'pesan-permintaan':
+					include "Permintaan/permintaan_surat.php";
 					break;
 
           
