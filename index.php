@@ -545,7 +545,7 @@
 					include "surat/suket_pindah.php";
 					break;
 				case 'suket-tidak-mampu':
-					include "";
+					include "surat/suket_tidak_mampu.php";
 					break;
 
           
