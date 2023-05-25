@@ -66,7 +66,7 @@
                         <td class="mailbox-attachment"></td>
                         <td class="mailbox-date">5 mins ago</td>
                     </tr>
-                    <tr>
+                    <!-- <tr>
                         <td>
                             <div class="icheck-primary">
                                 <input type="checkbox" value="" id="check2">
@@ -261,7 +261,7 @@
                         </td>
                         <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
                         <td class="mailbox-date">15 days ago</td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
             <!-- /.table -->
@@ -306,4 +306,3 @@
         </div>
     </div>
 </div>
-
