@@ -378,6 +378,19 @@ include "inc/koneksi.php";
 							</li>
 
 							<li class="nav-header">Setting</li>
+						<?php
+						} elseif ($data_level == "User") {
+						?>
+
+							<li class="nav-item">
+								<a href="?page=user-minta" class="nav-link">
+									<i class="nav-icon fas fa-tachometer-alt"></i>
+									<p>
+										Minta Surat
+									</p>
+								</a>
+							</li>
+							<li class="nav-header">Setting</li>
 
 						<?php
 						}
@@ -568,6 +581,11 @@ include "inc/koneksi.php";
 								//pesan permintaan
 							case 'pesan-permintaan':
 								include "admin/Permintaan/permintaan_surat.php";
+								break;
+
+								//user
+							case 'user-minta':
+								include "user/userMinta.php";
 								break;
 
 
