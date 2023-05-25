@@ -1,15 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+<div class="card">
+    <div class="card-header">
+        Data Permintaan Surat
+    </div>
+    <div class="card-body">
+    <a href="#" class="btn btn-primary">Tambah</a>
+        <table class="table table-bordered mt-3">
+        <tr>
+            <th>NIK</th>
+            <th>NAMA</th>
+            <th>JENIS SURAT</th>
+            <th>STATUS</th>
+        </tr>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+            
+        </table>
 
-<body>
-    <p>Test</p>
-</body>
-
-</html>
+        
+    </div>
+</div>
