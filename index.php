@@ -706,6 +706,32 @@ include "inc/koneksi.php";
 				}
 			})
 		})
+
+
+
+		$('#addData').click(function() {
+			$('#dataPermintaan').hide();
+			$('#formAdd').show();
+			$('#prosesData').hide();
+		});
+
+		$('#back').click(function() {
+			// $("#surat option[value=1]").attr("selected", "selected");
+			$('#formAdd').hide();
+			$('#dataPermintaan').show();
+			$('#disable').attr("selected", "selected");
+		});
+
+		$(function() {
+			$("#surat").change(function() {
+				if ($(".jenis_surat").is(":selected")) {
+					$('#prosesData').show();
+					$('#disable').removeAttr('selected');
+				} else {
+					$('#prosesData').hide();
+				}
+			}).trigger('change');
+		});
 	</script>
 
 </body>
