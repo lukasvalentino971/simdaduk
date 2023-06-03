@@ -8,6 +8,11 @@ if (isset($_SESSION["ses_username"]) == "") {
 	$data_nama = $_SESSION["ses_nama"];
 	$data_user = $_SESSION["ses_username"];
 	$data_level = $_SESSION["ses_level"];
+
+	//
+	if (isset($_SESSION["id_pend"])) {
+		$id_pend = $_SESSION["id_pend"];
+	}
 }
 
 //KONEKSI DB
@@ -226,7 +231,7 @@ include "inc/koneksi.php";
 							</li>
 
 							<li class="nav-item">
-								<a href="?pesan-permintaan" class="nav-link">
+								<a href="?page=pesan-permintaan" class="nav-link">
 									<i class="nav-icon fas fa-envelope"></i>
 									<p>
 										Permintaan

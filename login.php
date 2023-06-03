@@ -1,6 +1,6 @@
 <?php
-  include "inc/koneksi.php";
-   
+include "inc/koneksi.php";
+
 ?>
 
 <!DOCTYPE html>
@@ -69,19 +69,19 @@
 						</div>
 				</form>
 
-				</div>
 			</div>
 		</div>
-		<!-- /.login-box -->
+	</div>
+	<!-- /.login-box -->
 
-		<!-- jQuery -->
-		<script src="plugins/jquery/jquery.min.js"></script>
-		<!-- Bootstrap 4 -->
-		<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-		<!-- AdminLTE App -->
-		<script src="dist/js/adminlte.min.js"></script>
-		<!-- Alert -->
-		<script src="plugins/alert.js"></script>
+	<!-- jQuery -->
+	<script src="plugins/jquery/jquery.min.js"></script>
+	<!-- Bootstrap 4 -->
+	<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<!-- AdminLTE App -->
+	<script src="dist/js/adminlte.min.js"></script>
+	<!-- Alert -->
+	<script src="plugins/alert.js"></script>
 
 </body>
 
@@ -93,36 +93,47 @@
 
 
 
-if (isset($_POST['btnLogin'])) {  
+if (isset($_POST['btnLogin'])) {
 	//anti inject sql
-	$username=mysqli_real_escape_string($koneksi,$_POST['username']);
-	$password=mysqli_real_escape_string($koneksi,$_POST['password']);
+	$username = mysqli_real_escape_string($koneksi, $_POST['username']);
+	$password = mysqli_real_escape_string($koneksi, $_POST['password']);
 
 	//query login
 	$sql_login = "SELECT * FROM pengguna WHERE BINARY username='$username' AND password='$password'";
 	$query_login = mysqli_query($koneksi, $sql_login);
-	$data_login = mysqli_fetch_array($query_login,MYSQLI_BOTH);
+	$data_login = mysqli_fetch_array($query_login, MYSQLI_BOTH);
 	$jumlah_login = mysqli_num_rows($query_login);
 
 
-	if ($jumlah_login ==1 ){
+	if ($jumlah_login == 1) {
 		session_start();
-		$_SESSION["ses_id"]=$data_login["id_pengguna"];
-		$_SESSION["ses_nama"]=$data_login["nama_pengguna"];
-		$_SESSION["ses_username"]=$data_login["username"];
-		$_SESSION["ses_password"]=$data_login["password"];
-		$_SESSION["ses_level"]=$data_login["level"];
-	
+		$_SESSION["ses_id"] = $data_login["id_pengguna"];
+		$_SESSION["ses_nama"] = $data_login["nama_pengguna"];
+		$_SESSION["ses_username"] = $data_login["username"];
+		$_SESSION["ses_password"] = $data_login["password"];
+		$_SESSION["ses_level"] = $data_login["level"];
+
+		// get id penduduk where status = User
+		if ($data_login["level"] == "User") {
+			$nik_pend = $data_login["username"];
+			$sql = "SELECT * FROM penduduk WHERE nik= '$nik_pend' ";
+			$query = mysqli_query($koneksi, $sql);
+			$data_pend = mysqli_fetch_array($query, MYSQLI_BOTH);
+
+			//get id
+			$_SESSION["id_pend"] = $data_pend["id_pend"];
+		}
+
 		echo "<script>
 			Swal.fire({title: 'Login Berhasil',text: '',icon: 'success',confirmButtonText: 'OK'
 			}).then((result) => {if (result.value)
 				{window.location = 'index.php';}
 			})</script>";
-		}else{
+	} else {
 		echo "<script>
 			Swal.fire({title: 'Login Gagal',text: '',icon: 'error',confirmButtonText: 'OK'
 			}).then((result) => {if (result.value)
 				{window.location = 'login.php';}
 			})</script>";
-		}
-		}
+	}
+}

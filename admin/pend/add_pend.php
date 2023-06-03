@@ -1,7 +1,8 @@
 <div class="card card-primary">
 	<div class="card-header">
 		<h3 class="card-title">
-			<i class="fa fa-edit"></i> Tambah Data</h3>
+			<i class="fa fa-edit"></i> Tambah Data
+		</h3>
 	</div>
 	<form action="" method="post" enctype="multipart/form-data">
 		<div class="card-body">
@@ -95,37 +96,48 @@
 
 <?php
 
-    if (isset ($_POST['Simpan'])){
-    //mulai proses simpan data
-        $sql_simpan = "INSERT INTO penduduk (nik, nama, tempat_lh, tgl_lh, jekel, desa, rt, rw, agama, kawin, pekerjaan, status) VALUES (
-            '".$_POST['nik']."',
-            '".$_POST['nama']."',
-			'".$_POST['tempat_lh']."',
-			'".$_POST['tgl_lh']."',
-            '".$_POST['jekel']."',
-            '".$_POST['desa']."',
-			'".$_POST['rt']."',
-			'".$_POST['rw']."',
-			'".$_POST['agama']."',
-			'".$_POST['kawin']."',
-			'".$_POST['pekerjaan']."',
+if (isset($_POST['Simpan'])) {
+	//mulai proses simpan data
+	$sql_simpan = "INSERT INTO penduduk (nik, nama, tempat_lh, tgl_lh, jekel, desa, rt, rw, agama, kawin, pekerjaan, status) VALUES (
+            '" . $_POST['nik'] . "',
+            '" . $_POST['nama'] . "',
+			'" . $_POST['tempat_lh'] . "',
+			'" . $_POST['tgl_lh'] . "',
+            '" . $_POST['jekel'] . "',
+            '" . $_POST['desa'] . "',
+			'" . $_POST['rt'] . "',
+			'" . $_POST['rw'] . "',
+			'" . $_POST['agama'] . "',
+			'" . $_POST['kawin'] . "',
+			'" . $_POST['pekerjaan'] . "',
             'Ada')";
-        $query_simpan = mysqli_query($koneksi, $sql_simpan);
-        mysqli_close($koneksi);
 
-    if ($query_simpan) {
-      echo "<script>
+	//tambah data user
+	$sql_simpanUser = "INSERT INTO pengguna (nama_pengguna,username,password,level) VALUES (
+        '" . $_POST['nama'] . "',
+        '" . $_POST['nik'] . "',
+        '" . $_POST['nik'] . "',
+        'User')";
+
+	$query_simpanUser = mysqli_query($koneksi, $sql_simpanUser);
+
+	$query_simpan = mysqli_query($koneksi, $sql_simpan);
+	mysqli_close($koneksi);
+
+	if ($query_simpan && $query_simpanUser) {
+		echo "<script>
       Swal.fire({title: 'Tambah Data Berhasil',text: '',icon: 'success',confirmButtonText: 'OK'
       }).then((result) => {if (result.value){
           window.location = 'index.php?page=data-pend';
           }
       })</script>";
-      }else{
-      echo "<script>
+	} else {
+		echo "<script>
       Swal.fire({title: 'Tambah Data Gagal',text: '',icon: 'error',confirmButtonText: 'OK'
       }).then((result) => {if (result.value){
           window.location = 'index.php?page=add-pend';
           }
       })</script>";
-    }}
+	}
+}
      //selesai proses simpan data
