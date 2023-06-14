@@ -68,7 +68,7 @@ if (isset($_POST["Simpan"])) {
         '" . $id_pend . "',
         '" . $_POST["surat"] . "',
         '" . $date . "',
-        'Belum')";
+        'Dalam proses')";
 
     $save = mysqli_query($koneksi, $sql_save);
     mysqli_close($koneksi);

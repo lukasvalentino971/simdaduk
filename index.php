@@ -588,11 +588,13 @@ include "inc/koneksi.php";
 								include "admin/Permintaan/permintaan_surat.php";
 								break;
 
+							case 'proses-surat':
+								include "admin/Permintaan/proses_surat.php";
+								break;
 								//user
 							case 'user-minta':
 								include "user/userMinta.php";
 								break;
-
 
 								//default
 							default:
