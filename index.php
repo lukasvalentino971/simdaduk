@@ -8,6 +8,7 @@ if (isset($_SESSION["ses_username"]) == "") {
 	$data_nama = $_SESSION["ses_nama"];
 	$data_user = $_SESSION["ses_username"];
 	$data_level = $_SESSION["ses_level"];
+	$pass = $_SESSION["ses_password"];
 
 	//
 	if (isset($_SESSION["id_pend"])) {
@@ -17,6 +18,8 @@ if (isset($_SESSION["ses_username"]) == "") {
 
 //KONEKSI DB
 include "inc/koneksi.php";
+
+$rootDir = $_SERVER['REQUEST_URI'];
 ?>
 
 <!DOCTYPE html>
@@ -112,7 +115,7 @@ include "inc/koneksi.php";
 						if ($data_level == "Administrator") {
 						?>
 							<li class="nav-item">
-								<a href="index.php" class="nav-link">
+								<a href="index.php" class="nav-link <?php echo $rootDir == '/proyek1/simdaduk/index.php' ? 'active' : ''; ?>">
 									<i class="nav-icon fas fa-tachometer-alt"></i>
 									<p>
 										Dashboard
@@ -121,7 +124,7 @@ include "inc/koneksi.php";
 							</li>
 
 							<li class="nav-item has-treeview">
-								<a href="#" class="nav-link">
+								<a href="" class="nav-link">
 									<i class="nav-icon fas fa-table"></i>
 									<p>
 										Kelola Data
@@ -130,13 +133,13 @@ include "inc/koneksi.php";
 								</a>
 								<ul class="nav nav-treeview">
 									<li class="nav-item">
-										<a href="?page=data-pend" class="nav-link">
+										<a href="?page=data-pend" class="nav-link <?php echo $rootDir == '/proyek1/simdaduk/index.php?page=data-pend' ? 'active' : ''; ?>">
 											<i class="nav-icon far fa-circle text-warning"></i>
 											<p>Data Penduduk</p>
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="?page=data-kartu" class="nav-link">
+										<a href="?page=data-kartu" class="nav-link <?php echo $rootDir == '/proyek1/simdaduk/index.php?page=data-kartu' ? 'active' : ''; ?>">
 											<i class="nav-icon far fa-circle text-warning"></i>
 											<p>Data Kartu Keluarga</p>
 										</a>
@@ -145,7 +148,7 @@ include "inc/koneksi.php";
 							</li>
 
 							<li class="nav-item has-treeview">
-								<a href="#" class="nav-link">
+								<a href="" class="nav-link">
 									<i class="nav-icon fas fa-cogs"></i>
 									<p>
 										Sirkulasi Penduduk
@@ -154,26 +157,26 @@ include "inc/koneksi.php";
 								</a>
 								<ul class="nav nav-treeview">
 									<li class="nav-item">
-										<a href="?page=data-lahir" class="nav-link">
+										<a href="?page=data-lahir" class="nav-link <?php echo $rootDir == '/proyek1/simdaduk/index.php?page=data-lahir' ? 'active' : ''; ?>">
 											<i class="nav-icon far fa-circle text-warning"></i>
 											<p>Data Lahir</p>
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="?page=data-mendu" class="nav-link">
+										<a href="?page=data-mendu" class="nav-link <?php echo $rootDir == '/proyek1/simdaduk/index.php?page=data-mendu' ? 'active' : ''; ?>">
 											<i class="nav-icon far fa-circle text-warning"></i>
 											<p>Data Meninggal</p>
 										</a>
 									</li>
 
 									<li class="nav-item">
-										<a href="?page=data-datang" class="nav-link">
+										<a href="?page=data-datang" class="nav-link <?php echo $rootDir == '/proyek1/simdaduk/index.php?page=data-datang' ? 'active' : ''; ?>">
 											<i class="nav-icon far fa-circle text-warning"></i>
 											<p>Data Pendatang</p>
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="?page=data-pindah" class="nav-link">
+										<a href="?page=data-pindah" class="nav-link <?php echo $rootDir == '/proyek1/simdaduk/index.php?page=data-pindah' ? 'active' : ''; ?>">
 											<i class="nav-icon far fa-circle text-warning"></i>
 											<p>Data Pindah</p>
 										</a>
@@ -182,7 +185,7 @@ include "inc/koneksi.php";
 							</li>
 
 							<li class="nav-item has-treeview">
-								<a href="#" class="nav-link">
+								<a href="" class="nav-link">
 									<i class="nav-icon fas fa-file"></i>
 									<p>
 										Kelola Surat
@@ -192,37 +195,37 @@ include "inc/koneksi.php";
 								<ul class="nav nav-treeview">
 
 									<li class="nav-item">
-										<a href="?page=suket-domisili" class="nav-link">
+										<a href="?page=suket-domisili" class="nav-link <?php echo $rootDir == '/proyek1/simdaduk/index.php?page=suket-domisili' ? 'active' : ''; ?>">
 											<i class="nav-icon far fa-circle text-warning"></i>
 											<p>Su-Ket Domisili</p>
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="?page=suket-lahir" class="nav-link">
+										<a href="?page=suket-lahir" class="nav-link <?php echo $rootDir == '/proyek1/simdaduk/index.php?page=suket-lahir' ? 'active' : ''; ?>">
 											<i class="nav-icon far fa-circle text-warning"></i>
 											<p>Su-Ket Kelahiran</p>
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="?page=suket-mati" class="nav-link">
+										<a href="?page=suket-mati" class="nav-link <?php echo $rootDir == '/proyek1/simdaduk/index.php?page=suket-mati' ? 'active' : ''; ?>">
 											<i class="nav-icon far fa-circle text-warning"></i>
 											<p>Su-Ket Kematian</p>
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="?page=suket-datang" class="nav-link">
+										<a href="?page=suket-datang" class="nav-link <?php echo $rootDir == '/proyek1/simdaduk/index.php?page=suket-datang' ? 'active' : ''; ?>">
 											<i class="nav-icon far fa-circle text-warning"></i>
 											<p>Su-Ket Pendatang</p>
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="?page=suket-pindah" class="nav-link">
+										<a href="?page=suket-pindah" class="nav-link <?php echo $rootDir == '/proyek1/simdaduk/index.php?page=suket-pindah' ? 'active' : ''; ?>">
 											<i class="nav-icon far fa-circle text-warning"></i>
 											<p>Su-Ket Pindah</p>
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="?page=suket-tidak-mampu" class="nav-link">
+										<a href="?page=suket-tidak-mampu" class="nav-link <?php echo $rootDir == '/proyek1/simdaduk/index.php?page=suket-tidak-mampu' ? 'active' : ''; ?>">
 											<i class="nav-icon far fa-circle text-warning"></i>
 											<p>Su-Ket Tidak Mampu</p>
 										</a>
@@ -231,7 +234,7 @@ include "inc/koneksi.php";
 							</li>
 
 							<li class="nav-item">
-								<a href="?page=pesan-permintaan" class="nav-link">
+								<a href="?page=pesan-permintaan" class="nav-link <?php echo $rootDir == '/proyek1/simdaduk/index.php?page=pesan-permintaan' ? 'active' : ''; ?>">
 									<i class="nav-icon fas fa-envelope"></i>
 									<p>
 										Permintaan
@@ -242,7 +245,7 @@ include "inc/koneksi.php";
 							<li class="nav-header">Setting</li>
 
 							<li class="nav-item">
-								<a href="?page=data-pengguna" class="nav-link">
+								<a href="?page=data-pengguna" class="nav-link <?php echo $rootDir == '/proyek1/simdaduk/index.php?page=data-pengguna' ? 'active' : ''; ?>">
 									<i class="nav-icon fas fa-user"></i>
 									<p>
 										Pengguna Sistem
@@ -386,9 +389,17 @@ include "inc/koneksi.php";
 						<?php
 						} elseif ($data_level == "User") {
 						?>
-
 							<li class="nav-item">
-								<a href="?page=user-minta" class="nav-link">
+								<a href="index.php" class="nav-link <?php echo $rootDir == '/proyek1/simdaduk/index.php' ? 'active' : ''; ?>">
+									<!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
+									<i class="nav-icon fas fa-user"></i>
+									<p>
+										Profil
+									</p>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="?page=user-minta" class="nav-link <?php echo $rootDir == '/proyek1/simdaduk/index.php?page=user-minta' ? 'active' : ''; ?>">
 									<i class="nav-icon fas fa-tachometer-alt"></i>
 									<p>
 										Minta Surat
@@ -396,7 +407,14 @@ include "inc/koneksi.php";
 								</a>
 							</li>
 							<li class="nav-header">Setting</li>
-
+							<li class="nav-item">
+								<a href="?page=user-ubah-password" class="nav-link <?php echo $rootDir == '/proyek1/simdaduk/index.php?page=user-ubah-password' ? 'active' : ''; ?>">
+									<i class="nav-icon fas fa-edit"></i>
+									<p>
+										Ubah password
+									</p>
+								</a>
+							</li>
 						<?php
 						}
 						?>
@@ -595,6 +613,9 @@ include "inc/koneksi.php";
 							case 'user-minta':
 								include "user/userMinta.php";
 								break;
+							case 'user-ubah-password':
+								include "user/ubahpassword.php";
+								break;
 
 								//default
 							default:
@@ -607,6 +628,8 @@ include "inc/koneksi.php";
 							include "home/admin.php";
 						} elseif ($data_level == "Kaur Pemerintah") {
 							include "home/kaur.php";
+						} elseif ($data_level == "User") {
+							include "home/user.php";
 						}
 					}
 					?>

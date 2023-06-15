@@ -1,44 +1,44 @@
 <?php
 
-  $sql = $koneksi->query("SELECT COUNT(id_pend) as pend  from penduduk where status='Ada'");
-  while ($data= $sql->fetch_assoc()) {
-    $pend=$data['pend'];
-  }
+$sql = $koneksi->query("SELECT COUNT(id_pend) as pend  from penduduk where status='Ada'");
+while ($data = $sql->fetch_assoc()) {
+	$pend = $data['pend'];
+}
 
-  $sql = $koneksi->query("SELECT COUNT(id_kk) as kartu  from kk");
-  while ($data= $sql->fetch_assoc()) {
-    $kartu=$data['kartu'];
-  }
+$sql = $koneksi->query("SELECT COUNT(id_kk) as kartu  from kk");
+while ($data = $sql->fetch_assoc()) {
+	$kartu = $data['kartu'];
+}
 
-  $sql = $koneksi->query("SELECT COUNT(id_pend) as laki  from penduduk where jekel='LK' and status='ada'");
-  while ($data= $sql->fetch_assoc()) {
-    $laki=$data['laki'];
-  }
+$sql = $koneksi->query("SELECT COUNT(id_pend) as laki  from penduduk where jekel='LK' and status='ada'");
+while ($data = $sql->fetch_assoc()) {
+	$laki = $data['laki'];
+}
 
-  $sql = $koneksi->query("SELECT COUNT(id_pend) as prem  from penduduk where jekel='PR' and status='ada'");
-  while ($data= $sql->fetch_assoc()) {
-    $prem=$data['prem'];
-  }
+$sql = $koneksi->query("SELECT COUNT(id_pend) as prem  from penduduk where jekel='PR' and status='ada'");
+while ($data = $sql->fetch_assoc()) {
+	$prem = $data['prem'];
+}
 
-  $sql = $koneksi->query("SELECT COUNT(id_lahir) as lahir from lahir");
-  while ($data= $sql->fetch_assoc()) {
-    $lahir=$data['lahir'];
-  }
+$sql = $koneksi->query("SELECT COUNT(id_lahir) as lahir from lahir");
+while ($data = $sql->fetch_assoc()) {
+	$lahir = $data['lahir'];
+}
 
-  $sql = $koneksi->query("SELECT COUNT(id_mendu) as mendu  from meninggal_dunia");
-  while ($data= $sql->fetch_assoc()) {
-    $mendu=$data['mendu'];
-  }
+$sql = $koneksi->query("SELECT COUNT(id_mendu) as mendu  from meninggal_dunia");
+while ($data = $sql->fetch_assoc()) {
+	$mendu = $data['mendu'];
+}
 
-  $sql = $koneksi->query("SELECT COUNT(id_datang) as datang  from datang");
-  while ($data= $sql->fetch_assoc()) {
-    $datang=$data['datang'];
-  }
+$sql = $koneksi->query("SELECT COUNT(id_datang) as datang  from datang");
+while ($data = $sql->fetch_assoc()) {
+	$datang = $data['datang'];
+}
 
-  $sql = $koneksi->query("SELECT COUNT(id_pindah) as pindah  from pindah");
-  while ($data= $sql->fetch_assoc()) {
-    $pindah=$data['pindah'];
-  }
+$sql = $koneksi->query("SELECT COUNT(id_pindah) as pindah  from pindah");
+while ($data = $sql->fetch_assoc()) {
+	$pindah = $data['pindah'];
+}
 
 ?>
 
@@ -196,5 +196,3 @@
 	</div>
 
 </div>
-
-
