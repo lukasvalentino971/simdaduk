@@ -1,5 +1,5 @@
 <div class="row justify-content-center mt-5">
-    <div class="col-6">
+    <div class="col-lg-6 col-md-9 col-sm-12 d-flex justify-content-center">
         <div class="login-box">
             <?php
             if (isset($_SESSION['next'])) {

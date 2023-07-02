@@ -1,4 +1,4 @@
-<div class="card" id="dataPermintaan">
+<div class="card" id="dataPermintaan" style="overflow: auto;">
     <div class="card-header">
         Data Permintaan Surat
     </div>

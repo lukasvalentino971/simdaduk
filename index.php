@@ -400,7 +400,7 @@ $rootDir = $_SERVER['REQUEST_URI'];
 							</li>
 							<li class="nav-item">
 								<a href="?page=user-minta" class="nav-link <?php echo $rootDir == '/proyek1/simdaduk/index.php?page=user-minta' ? 'active' : ''; ?>">
-									<i class="nav-icon fas fa-tachometer-alt"></i>
+									<i class="nav-icon fas fa-paper-plane"></i>
 									<p>
 										Minta Surat
 									</p>
