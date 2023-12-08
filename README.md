@@ -1,0 +1,3 @@
+# SIMDADUK
+
+This project is an online-based Village Population Information System known as the Tanjungrejo Village Population Information System. It aims to simplify administration for the Tanjungrejo community. The user interface is designed in a modern style, employing an attractive color scheme to capture users' attention. The website features two main roles: users, responsible for receiving letters, and admins, tasked with verifying documents submitted by users.
